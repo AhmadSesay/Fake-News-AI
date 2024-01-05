@@ -12,7 +12,9 @@ X , Y = data['text'], data['fake']
 
 X_train, X_test, y_train, y_test = train_test_split(X , Y, test_size=0.2)
 
-vectorizer 
+vectorizer = TfidfVectorizer(stop_words= "english", max_df = 0.7)
+X_train_vectorized = vectorizer.fit_transform(X_train)
+X_train_vectorized = vectorizer.transform(X_test)
 
 
 
