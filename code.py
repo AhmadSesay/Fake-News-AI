@@ -14,7 +14,12 @@ X_train, X_test, y_train, y_test = train_test_split(X , Y, test_size=0.2)
 
 vectorizer = TfidfVectorizer(stop_words= "english", max_df = 0.7)
 X_train_vectorized = vectorizer.fit_transform(X_train)
-X_train_vectorized = vectorizer.transform(X_test)
+X_test_vectorized = vectorizer.transform(X_test)
+
+clf = LinearSVC()
+clf.fit(X_train_vectorized, y_train)
+
+clf.score(X_test_vectorized, y_test)
 
 
 
