@@ -83,7 +83,9 @@ print('Accuracy score of the testing data is : ', testing_data_accuracy)
 
 
 
-# predicing whether an article is fake for real
+# predicing whether an article is fake for real. 
+# Plug an article into X_new and have the model predict if it is real or fake.
+# for this example the tests data is being used.
 X_new = X_test[0]
 
 prediction = model.predict(X_new)
